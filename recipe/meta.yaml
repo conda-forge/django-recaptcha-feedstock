@@ -1,22 +1,21 @@
-{% set version = "1.2.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: django-recaptcha
   version: {{ version }}
 
 source:
-  fn: django-recaptcha-{{ version }}.tar.gz
   url: https://github.com/praekelt/django-recaptcha/archive/{{ version }}.tar.gz
-  sha256: 5b9edc47974d640dd0c22c5755c6b6c5a3d06816133d10a57b56157120d9b632
+  sha256: c93aedc3a22ae6bfa6d923d3dfb1226f679eca5cf6eb3e055196574e4c657041
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - django
