@@ -14,9 +14,7 @@ Summary: Django recaptcha form field/widget app.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/django-recaptcha-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/django-recaptcha-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/django-recaptcha-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/django-recaptcha-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/django-recaptcha-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/django-recaptcha-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/django-recaptcha-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/django-recaptcha-feedstock)
 
 Current release info
 ====================
