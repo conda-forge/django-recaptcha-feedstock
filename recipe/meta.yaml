@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: django-recaptcha
@@ -6,15 +6,15 @@ package:
 
 source:
   url: https://github.com/praekelt/django-recaptcha/archive/{{ version }}.tar.gz
-  sha256: 0c72b5fbb566c41b68b204fe5ecd688cfd79e72fa5994062e424822e60c530f2
+  sha256: b40d3c49033985e7b68fd8dceb7661aa41eed8d2e7f3134f2f21b6f69b0e7f2c
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -22,8 +22,8 @@ requirements:
     - django
 
 test:
-  imports:
-    - captcha
+  commands:
+    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
 
 about:
   home: http://github.com/praekelt/django-recaptcha
