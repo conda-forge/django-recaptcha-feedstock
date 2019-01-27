@@ -11,10 +11,10 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -22,8 +22,8 @@ requirements:
     - django
 
 test:
-  imports:
-    - captcha
+  commands:
+    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
 
 about:
   home: http://github.com/praekelt/django-recaptcha
