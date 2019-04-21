@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About django-recaptcha
 ======================
 
@@ -18,8 +14,17 @@ Summary: Django recaptcha form field/widget app.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/django-recaptcha-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/django-recaptcha-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3849&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/django-recaptcha-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
