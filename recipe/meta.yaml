@@ -1,4 +1,4 @@
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: django-recaptcha
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/praekelt/django-recaptcha/archive/{{ version }}.tar.gz
-  sha256: fef5f23cce795e9c6d3b1d5812637416e244137f04ea04bb0d3975b21af8354a
+  sha256: dfb8ea7c63134a7199b6d92ace0bc8a75c03a5b2ff5193ba46554c41aec26be6
 
 build:
   number: 0
