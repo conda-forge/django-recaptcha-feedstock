@@ -15,19 +15,22 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - django
 
 test:
+  requires:
+    - pip
   commands:
+    - pip check
     - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
 
 about:
   home: http://github.com/praekelt/django-recaptcha
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Django recaptcha form field/widget app.
 
