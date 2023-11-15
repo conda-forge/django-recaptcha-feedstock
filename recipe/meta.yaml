@@ -1,24 +1,25 @@
-{% set version = "4.0.0" %}
+{% set name = "django-recaptcha" %}
+{% set version = "3.0.0" %}
 
 package:
-  name: django-recaptcha
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/praekelt/django-recaptcha/archive/{{ version }}.tar.gz
-  sha256: ae5e7897888b34f7d72186a7a51493ffeb6a31f7be32dd30667acf83c485d185
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-recaptcha-{{ version }}.tar.gz
+  sha256: 253197051288923cae675d7eff91b619e3775311292a5dbaf27a8a55ffebc670
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - django
 
 test:
@@ -29,7 +30,7 @@ test:
     - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
 
 about:
-  home: http://github.com/praekelt/django-recaptcha
+  home: https://github.com/torchbox/django-recaptcha
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Django recaptcha form field/widget app.
