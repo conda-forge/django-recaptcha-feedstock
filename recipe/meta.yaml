@@ -1,5 +1,5 @@
 {% set name = "django-recaptcha" %}
-{% set version = "3.0.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-recaptcha-{{ version }}.tar.gz
-  sha256: 253197051288923cae675d7eff91b619e3775311292a5dbaf27a8a55ffebc670
+  sha256: 5316438f97700c431d65351470d1255047e3f2cd9af0f2f13592b637dad9213e
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
+    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import django_recaptcha"
 
 about:
   home: https://github.com/torchbox/django-recaptcha
@@ -38,3 +38,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - sdc50

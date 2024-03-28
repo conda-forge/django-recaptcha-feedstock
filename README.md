@@ -3,7 +3,7 @@ About django-recaptcha-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-recaptcha-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/praekelt/django-recaptcha
+Home: https://github.com/torchbox/django-recaptcha
 
 Package license: BSD-3-Clause
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@sdc50](https://github.com/sdc50/)
 
