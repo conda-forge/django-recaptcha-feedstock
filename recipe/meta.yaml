@@ -27,7 +27,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import captcha"
+    - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import django_recaptcha"
 
 about:
   home: https://github.com/torchbox/django-recaptcha
