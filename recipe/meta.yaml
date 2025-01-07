@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-recaptcha-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-recaptcha-{{ version }}.tar.gz
   sha256: 5316438f97700c431d65351470d1255047e3f2cd9af0f2f13592b637dad9213e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - django
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - python -c "import django; from django.conf import settings; settings.configure(); django.setup(); import django_recaptcha"
