@@ -1,18 +1,18 @@
 {% set name = "django-recaptcha" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-recaptcha-{{ version }}.tar.gz
-  sha256: 5316438f97700c431d65351470d1255047e3f2cd9af0f2f13592b637dad9213e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 73097b958733f65b729d4e4630c51fc2bf147aca6f026017d18898dfc25cb4c5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
